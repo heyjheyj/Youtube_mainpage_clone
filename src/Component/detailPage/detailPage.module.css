@@ -1,0 +1,56 @@
+.detailPage {
+    margin: auto;
+    width: 93%;
+    color: white;
+    height: 100%;
+    padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video {
+    margin-top: 25px;
+    width: 100%;
+    height: 80vh;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.videoplay {
+    display: flex;
+    justify-content: center;
+}
+
+.videoInfo {
+    margin-top: 24px;
+}
+
+.videotitle {
+    position: relative;
+    height: 6rem;
+    border-bottom: 1px solid #313131;
+}
+
+.date {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    color: #888;
+}
+
+.likedislike {
+    top: 65%;
+    right: 20px;
+    position: absolute;
+    align-items: center;
+    font-size: 15px;
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user {
+    margin-top: 20px;
+}
