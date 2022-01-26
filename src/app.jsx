@@ -12,7 +12,6 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(700);
 
   const selecteVideo = videos => {
-    // console.log(videos);
     setSelectedVideo(videos);
     window.scrollTo(0, 0);
   };
@@ -26,7 +25,6 @@ function App() {
   useEffect(
     () => {
       setWidth();
-      console.log(windowWidth);
     },
     [windowWidth]
   );

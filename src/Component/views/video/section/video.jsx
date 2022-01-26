@@ -9,7 +9,6 @@ import styles from "./video.module.css";
 
 const Video = ({ video, onVideoClick, display }) => {
   const videoinfo = video.snippet;
-  console.log(display);
 
   return display === "list"
     ? <li

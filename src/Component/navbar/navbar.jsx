@@ -28,13 +28,11 @@ const Navbar = ({ fetchVideoList, windowWidth }) => {
   }, [])
 
   const searchInputValue = e => {
-    console.log(e.target.value);
     setInputValue(e.target.value);
   };
 
   const searchVideo = (e) => {
     e.preventDefault();
-    console.log("search video");
     fetchVideoList(inputValue);
   };
 

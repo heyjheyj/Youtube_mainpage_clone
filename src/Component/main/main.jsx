@@ -5,8 +5,6 @@ import Videolist from "./section/videolist/videolist";
 import Videos from "../views/video/videos";
 
 const Main = ({ videos, onVideoClick, display }) => {
-  // console.log("[main page]props: ", videos, onVideoClick);
-
   return (
     <section className={styles.body}>
       <AsideMenu display={display} />

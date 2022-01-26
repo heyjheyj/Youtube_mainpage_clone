@@ -11,7 +11,6 @@ import {
 
 const AsideMenu = props => {
   const menuRef = useRef();
-  console.log(menuRef);
   if (props.display === "list") {
     menuRef.current.style.display = "none";
   }

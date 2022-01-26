@@ -54,3 +54,7 @@
 .user {
     margin-top: 20px;
 }
+
+.user > h5 {
+    margin-top: 5px;
+}

@@ -11,7 +11,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const DetailPage = ({ video }) => {
-  console.log("detail page:", video);
   return (
     <div className={styles.detailPage}>
       <section className={styles.videoplay}>
@@ -42,7 +41,14 @@ const DetailPage = ({ video }) => {
             <FontAwesomeIcon icon={faEllipsisH} />
           </div>
         </div>
-        <section className={styles.user}>이미지, 이름, 구독자 수, 구독버튼</section>
+        <section className={styles.user}>
+          <h3>
+            Channel: {video.snippet.channelTitle}
+          </h3>
+          <h5>
+            Description: {video.snippet.description}
+          </h5>
+        </section>
       </section>
     </div>
   );

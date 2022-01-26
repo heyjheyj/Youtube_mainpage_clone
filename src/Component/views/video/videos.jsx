@@ -4,7 +4,6 @@ import styles from "./videos.module.css";
 
 const Videos = props => {
   const { videos, onVideoClick, display } = props;
-  console.log("[videos page]props: ", videos, onVideoClick);
 
   return display === "none"
     ? <div className={styles.video}>
