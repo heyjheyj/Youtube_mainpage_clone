@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./asideMenu.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,8 +10,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const AsideMenu = props => {
+  const menuRef = useRef();
+  console.log(menuRef);
+  if (props.display === "list") {
+    menuRef.current.style.display = "none";
+  }
+
   return (
-    <aside className={styles.asideMenu}>
+    <aside className={styles.asideMenu} ref={menuRef}>
       <div className={styles.home}>
         <FontAwesomeIcon icon={faHome} />
         <span>홈</span>

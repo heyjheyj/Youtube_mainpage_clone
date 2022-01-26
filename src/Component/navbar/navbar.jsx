@@ -13,27 +13,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
-const Navbar = ({ fetchVideoList }) => {
+const Navbar = ({ fetchVideoList, windowWidth }) => {
   const [inputValue, setInputValue] = useState("");
-  const [windowWidth, setWindowWidth] = useState(700);
   const [showInputbox, setShowInputbox] = useState(false);
 
-  const setWidth = () => {
-    window.addEventListener("resize", () => {
-      setWindowWidth(window.innerWidth);
-    });
-  };
+  const refresh = () => {
+    window.location.reload()
+  }
 
-  useEffect(
-    () => {
-      setWidth();
-      console.log(windowWidth);
-      if (windowWidth > 660 ) {
-        setShowInputbox(false)
-      }
-    },
-    [windowWidth]
-  );
+  useEffect(() => {
+    if (windowWidth > 660) {
+      setShowInputbox(false);
+    }
+  }, [])
 
   const searchInputValue = e => {
     console.log(e.target.value);
@@ -52,7 +44,7 @@ const Navbar = ({ fetchVideoList }) => {
           {windowWidth > 660 ? <>
             <div className={styles.logo}>
           <FontAwesomeIcon icon={faBars} />
-          <div className={styles.logoIcon}>
+          <div className={styles.logoIcon} onClick={refresh}>
             <FontAwesomeIcon
               icon={faYoutube}
               className={`${styles.youtubeicon}`}

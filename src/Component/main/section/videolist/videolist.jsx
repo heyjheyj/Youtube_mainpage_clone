@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./videolist.module.css";
 
 const suggestlist = [
@@ -65,6 +65,11 @@ const suggestlist = [
 ];
 
 const Videolist = props => {
+  const listRef = useRef();
+  if (props.display === "list") {
+    listRef.current.style.display = "none";
+  }
+
   const renderSuggestion = () =>
     suggestlist.map((item, index) =>
       <span className={styles.suggest} key={index}>
@@ -73,7 +78,7 @@ const Videolist = props => {
     );
 
   return (
-    <div className={styles.videolist}>
+    <div className={styles.videolist} ref={listRef}>
       <section className={styles.suggestion}>
         {renderSuggestion()}
       </section>

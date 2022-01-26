@@ -21,3 +21,13 @@
         margin-left: 0;
     }
 }
+
+.videolist {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.videoRenderlist {
+    display: flex;
+    flex-direction: column;
+}

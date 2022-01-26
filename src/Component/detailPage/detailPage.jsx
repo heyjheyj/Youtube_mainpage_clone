@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const DetailPage = ({ video }) => {
+  console.log("detail page:", video);
   return (
     <div className={styles.detailPage}>
       <section className={styles.videoplay}>

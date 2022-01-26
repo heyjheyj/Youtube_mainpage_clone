@@ -1,4 +1,23 @@
 .videoSection {
     display: flex;
     flex-direction: row;
+    max-width: 1717px;
+}
+
+.detailpage {
+    width: 65%;
+}
+
+.mainpageSV {
+    width: 35%;
+}
+
+@media screen and (max-width: 1000px) {
+    .videoSection {
+        flex-direction: column;
+    }
+
+    .detailpage, .mainpageSV {
+        width: 100%;
+    }
 }
