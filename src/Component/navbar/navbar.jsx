@@ -28,10 +28,12 @@ const Navbar = ({ fetchVideoList, windowWidth }) => {
   }, [])
 
   const searchInputValue = e => {
+    console.log(e.target.value)
     setInputValue(e.target.value);
   };
 
   const searchVideo = (e) => {
+    console.log('search')
     e.preventDefault();
     fetchVideoList(inputValue);
   };
@@ -110,7 +112,6 @@ const Navbar = ({ fetchVideoList, windowWidth }) => {
             onBlur={() => setShowInputbox(false)}
           />
           <button
-            type="submit"
             onClick={searchVideo}
             className={styles.searchIconSM}
           >
