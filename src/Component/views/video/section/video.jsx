@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./video.module.css";
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

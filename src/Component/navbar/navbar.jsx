@@ -25,7 +25,7 @@ const Navbar = ({ fetchVideoList, windowWidth }) => {
     if (windowWidth > 660) {
       setShowInputbox(false);
     }
-  }, [])
+  }, [windowWidth])
 
   const searchInputValue = e => {
     console.log(e.target.value)

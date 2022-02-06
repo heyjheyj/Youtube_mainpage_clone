@@ -31,7 +31,8 @@ function App() {
 
   const fetchVideoList = async q => {
     try {
-      const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${q}&type=video&key=AIzaSyCeU0xON4Cu5hMlyS0E8jqP7NgPBP0-tTM`;
+      const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${q}&type=video&key=${process
+        .env.REACT_APP_API_KEY}`;
       const result = await axios.get(url);
       const videoData = result.data;
       const videoItemList = videoData.items.map(item => ({
