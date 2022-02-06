@@ -3,4 +3,4 @@
 - Stack : React, PostCSS, Youtube API
 - 날짜(기간): 2022. 1(2일)
 - 기능 : 유튜브 검색기능, 동영상 재생
-- 배포: Netlify https://reverent-payne-4de814.netlify.app
+- 배포: Netlify https://youtubemainpageclone.netlify.app
